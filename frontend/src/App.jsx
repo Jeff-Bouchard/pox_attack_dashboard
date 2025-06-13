@@ -5,7 +5,7 @@ export default function App() {
   const [attackType, setAttackType] = useState("replay");
 
   const runAttack = async () => {
-    const res = await fetch(`http://localhost:8100/api/run/${attackType}`);
+    const res = await fetch(`http://localhost:8000/api/run/${attackType}`);
     const result = await res.json();
     setLog((prev) => [...prev, ...result.log]);
   };

@@ -16,6 +16,7 @@ def run_attack(attack_type: str):
     return {"log": logs}
 
 # Simulated attacks - stub
+
 def simulate_attack(attack_type):
     logs = [f"Running {attack_type} attack..."]
     if attack_type == "replay":
@@ -23,7 +24,8 @@ def simulate_attack(attack_type):
     elif attack_type == "sybil":
         logs += ["Spawning 1000 fake keys...", "Rate limit tripped.", "❌ Partial success"]
     elif attack_type == "memory":
-        logs += ["Injecting synthetic memory...", "Hash mismatch.", "❌ Rejected"]
+        logs += ["Injecting synthetic memory..."]
+        logs += ["Hash mismatch.", "❌ Rejected"]
     elif attack_type == "forged":
         logs += ["Forging signature...", "Signature invalid.", "❌ Rejected"]
     else:
